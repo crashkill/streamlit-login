@@ -16,28 +16,27 @@ def get_current_page_name():
 
 def make_sidebar():
     with st.sidebar:
-        st.title("💎 Diamond Corp")
+        st.title("💎 Operações São Paulo")
         st.write("")
-        st.write("")
-
+        
         if st.session_state.get("logged_in", False):
-            st.page_link("pages/page1.py", label="Secret Company Stuff", icon="🔒")
-            st.page_link("pages/page2.py", label="More Secret Stuff", icon="🕵️")
+            st.page_link("pages/1 🔒 Planilhas Financeiras.py", label="Planilhas Financeiras", icon="🔒")
+            st.page_link("pages/2 🕵️ Forecast Corporativo.py", label="Forecast Corporativo", icon="🕵️")
 
             st.write("")
             st.write("")
 
-            if st.button("Log out"):
+            if st.button("Sair"):
                 logout()
 
-        elif get_current_page_name() != "streamlit_app":
+        elif get_current_page_name() != "home":
             # If anyone tries to access a secret page without being logged in,
             # redirect them to the login page
-            st.switch_page("streamlit_app.py")
+            st.switch_page("home.py")
 
 
 def logout():
     st.session_state.logged_in = False
     st.info("Logged out successfully!")
     sleep(0.5)
-    st.switch_page("streamlit_app.py")
+    st.switch_page("home.py")
