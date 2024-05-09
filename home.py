@@ -10,8 +10,8 @@ st.set_page_config(
 )
 
 # Configurações do Supabase
-SUPABASE_URL = "https://zgdmuerecyrbcjbarltn.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpnZG11ZXJlY3lyYmNqYmFybHRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAzNzE2NzAsImV4cCI6MjAyNTk0NzY3MH0.qWB6TL9eoDcAMouyZO9HP-0H-YJEcSl1zu9ktGeTv9k"
+SUPABASE_URL = ""
+SUPABASE_KEY = ""
 
 # Criar cliente Supabase
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
