@@ -20,8 +20,8 @@ def make_sidebar():
         st.write("")
         
         if st.session_state.get("logged_in", False):
-            st.page_link("pages/1 🔒 Planilhas Financeiras.py", label="Planilhas Financeiras", icon="🔒")
-            st.page_link("pages/2 🕵️ Forecast Corporativo.py", label="Forecast Corporativo", icon="🕵️")
+            st.page_link("pages/1 🕵️ Forecast Corporativo.py", label="Forecast Corporativo", icon="🕵️")
+            st.page_link("pages/2 🔒 Planilhas Financeiras.py", label="Planilhas Financeiras", icon="🔒")
 
             st.write("")
             st.write("")
