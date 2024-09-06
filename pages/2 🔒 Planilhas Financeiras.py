@@ -1,6 +1,5 @@
 import streamlit as st
 from navigation import make_sidebar
-from helper import XlsxToDataFrame
 import pandas as pd
 import numpy as np
 import locale
@@ -9,15 +8,12 @@ st.set_page_config(page_title="Dashboard Financeiro - Operações SP & CP",
                    page_icon=":bar_chart:",
                    layout="wide")
 
-arquivo_DRE = "assets/DRE.xlsx"
-
 make_sidebar()
 
-st.write(
-    """
-# 🔓 Planilhas Financeiras
-"""
-)
+st.write("# 🔓 Planilhas Financeiras")
+
+arquivo_DRE = "assets/DRE.xlsx"
+
 @st.cache_data
 def importExcel(filename, sheet_name):
     df = pd.read_excel(filename, sheet_name=sheet_name)

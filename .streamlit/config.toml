@@ -1,2 +1,10 @@
 [client]
 showSidebarNavigation = false
+
+[azure]
+CLIENT_ID = "bd89001b-064b-4f28-a1c4-988422e013bb"
+TENANT_ID = "d6c7d4eb-ad17-46c8-a404-f6a92cbead96"
+CLIENT_SECRET = "8G58Q~D.hMVQ0I9X5QCeEmsXHwfq~Ealy~aVidxv"
+AUTHORITY = "https://login.microsoftonline.com/d6c7d4eb-ad17-46c8-a404-f6a92cbead96"
+REDIRECT_PATH = "http://localhost:8501/getAToken"
+SCOPE = "https://graph.microsoft.com/.default"

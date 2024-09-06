@@ -1,0 +1,25 @@
+# Use a imagem base com a última versão do Python
+FROM python:3.12-slim
+
+# Define o diretório de trabalho no container
+WORKDIR /app
+
+# Instala o Poetry e as dependências em uma única etapa
+RUN pip install --no-cache-dir poetry \
+    && poetry config virtualenvs.create false \
+    && poetry config installer.parallel true
+
+# Copia o arquivo pyproject.toml, poetry.lock e requirements.txt para o diretório de trabalho
+COPY pyproject.toml poetry.lock ./
+
+# Instala as dependências do Poetry
+RUN poetry install --no-dev --no-interaction --no-ansi
+
+# Copia todos os arquivos da aplicação para o diretório de trabalho
+COPY . .
+
+# Expõe a porta onde o Streamlit irá rodar (8501 por padrão)
+EXPOSE 8501
+
+# Comando para rodar o Streamlit
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.enableCORS=false"]

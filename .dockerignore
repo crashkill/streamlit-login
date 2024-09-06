@@ -1,0 +1,34 @@
+# Ignorar arquivos de configuração de controle de versão
+.git
+.gitignore
+
+# Ignorar arquivos temporários e caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+
+# Ignorar ambientes virtuais locais (caso tenha algum)
+venv/
+#.env/
+.venv/
+
+
+# Ignorar dependências instaladas localmente
+node_modules/
+poetry.lock
+package-lock.json
+yarn.lock
+
+# Ignorar os arquivos de configuração do editor de texto/IDE
+.vscode/
+.idea/
+
+# Ignorar arquivos de build
+dist/
+build/
+
+# Ignorar dados sensíveis
+#*.env
